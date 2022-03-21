@@ -26,5 +26,9 @@ export const NAV__NAME: NavigationType[] = [
   {
     pId: TypeOfID.CSS,
     name: "CSS"
+  },
+  {
+    pId: TypeOfID.GIT,
+    name: "Git"
   }
 ]
