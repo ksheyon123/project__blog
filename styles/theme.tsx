@@ -5,6 +5,7 @@ export const theme = {
 
   mono03: "#828282",
   mono06Div: "#EBEBEB",
+  mono100: "#FFF",
 
   demiLight: 350,
   regular: 400,

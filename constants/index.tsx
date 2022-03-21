@@ -1,24 +1,30 @@
 
 import { NavigationType } from "./types";
+import { TypeOfID } from "./enum";
+
 export const PATH__NAME = {
 
 }
 
 export const NAV__NAME: NavigationType[] = [
   {
-    pId: 0,
+    pId: TypeOfID.BLOCKCHAIN,
     name: "Blockchain"
   },
   {
-    pId: 1,
+    pId: TypeOfID.REACT,
     name: "React"
   },
   {
-    pId: 2,
+    pId: TypeOfID.VANILLAJS,
     name: "VanillaJS"
   },
   {
-    pId: 3,
+    pId: TypeOfID.NEXTJS,
+    name: "NextJS"
+  },
+  {
+    pId: TypeOfID.CSS,
     name: "CSS"
   }
 ]

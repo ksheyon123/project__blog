@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-
+import Link from "next/link";
 import { ArticleType } from "../../constants/types";
 import { theme } from '../../styles/theme';
 
@@ -45,9 +45,11 @@ const StyledArticle = styled.article`
 const Article: React.FC<Props> = (props) => {
 
   const {
+    id,
     title,
     type,
     about,
+    relation,
     fId
   } = props;
 
@@ -56,11 +58,21 @@ const Article: React.FC<Props> = (props) => {
   }
 
   return (
-    <StyledArticle onClick={() => goTo(fId)}>
-      <span className="title">{title}</span><br />
-      {!!type && (<><span className="type">{type}</span><br /></>)}
-      {!!about && (<><span className="about">{about}</span><br /></>)}
-    </StyledArticle>
+    <Link href={`/details/${id}`}>
+      <StyledArticle onClick={() => goTo(fId)}>
+        <span className="title">{title}</span><br />
+        {!!type && (<><span className="type">{type}</span><br /></>)}
+        {!!about && (<><span className="about">{about}</span><br /></>)}
+        <div>
+          {!!relation && relation.map((el, idx) => {
+            return (
+              <span key={"#" + idx}>#{el}</span>
+            )
+          })}
+        </div>
+      </StyledArticle>
+    </Link>
+
   )
 }
 

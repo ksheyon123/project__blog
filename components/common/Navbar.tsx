@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
         {
           NAV__NAME.map((el: NavigationType, idx: number) => {
             return (
-              <NavNameWrapper {...el} />
+              <NavNameWrapper key={idx.toString()} {...el} />
             )
           })
         }
