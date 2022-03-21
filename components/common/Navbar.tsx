@@ -4,6 +4,13 @@ import { useRecoilState, useRecoilValue } from "recoil";
 import {
   navigationState
 } from "../../states/atom";
+import {
+  NAV__NAME
+} from "../../constants/index";
+import {
+  NavigationType
+} from "../../constants/types";
+import { theme } from '../../styles/theme';
 
 const StyledNavbar = styled.nav<{ isActive: boolean }>`
   position : absolute;
@@ -13,7 +20,27 @@ const StyledNavbar = styled.nav<{ isActive: boolean }>`
   height : calc(100vh - 60px);
   border-right : 1px solid #EBEBEB;
   background-color: #FFF;
+  /* ${props => props.isActive ? `display : block;` : `display : none`} */
 `;
+
+const Navbar: React.FC = () => {
+  const isActive = useRecoilValue(navigationState);
+
+  return (
+    <>
+      <StyledNavbar isActive={isActive}>
+        <NavDrawer />
+        {
+          NAV__NAME.map((el: NavigationType, idx: number) => {
+            return (
+              <NavNameWrapper {...el} />
+            )
+          })
+        }
+      </StyledNavbar>
+    </>
+  )
+}
 
 const StyledNavDrawer = styled.div<{ isActive: boolean }>`
   position : relative;
@@ -42,16 +69,17 @@ const NavDrawer: React.FC = () => {
   )
 }
 
-const Navbar: React.FC = () => {
-  const isActive = useRecoilValue(navigationState);
+const StyledNavName = styled.div`
+  ${props => props.theme.b3};
+  color : ${theme.mono03};
+  margin-bottom : 10px;
+`;
 
-
+const NavNameWrapper: React.FC<NavigationType> = ({ pId, name }) => {
   return (
-    <>
-      <StyledNavbar isActive={isActive}>
-        <NavDrawer />
-      </StyledNavbar>
-    </>
+    <StyledNavName>
+      {name}
+    </StyledNavName>
   )
 }
 

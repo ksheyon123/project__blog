@@ -7,9 +7,16 @@ export type DirectionType = {
 }
 
 export type ArticleType = {
+  id: number;
   title: string;
-  subtitle: string;
-  category: string;
+  type?: string;
+  about?: string;
   desc: string;
   fId: number;
+  relation?: string[];
+}
+
+export type NavigationType = {
+  pId: number;
+  name: string;
 }

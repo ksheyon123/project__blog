@@ -14,6 +14,7 @@ const StyledHeader = styled.header`
   width : 100vw;
   height :60px;
   border-bottom: 1px solid #EBEBEB;
+  background-color : #FFF;
 `;
 
 const Header: React.FC = () => {

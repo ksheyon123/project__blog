@@ -11,10 +11,6 @@ interface Props extends DirectionType {
   data: ArticleType[];
 }
 
-const StyledCard = styled.article`
-
-`;
-
 const StyledListView = styled.section<DirectionType>`
   display : flex;
   flex-direction: column;

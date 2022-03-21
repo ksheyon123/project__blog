@@ -1,11 +1,12 @@
 import { ReactElement } from "react";
-import styled from "styled-components";
 import {
   Layout,
   ListView
 } from "../components/common/index";
 import { ArticleType } from "../constants/types";
-
+import {
+  ARTICLE
+} from "../constants/articles";
 interface Props {
   data: ArticleType[];
 }
@@ -25,32 +26,7 @@ export const getServerSideProps = async () => {
 
   return {
     props: {
-      data: [
-        {
-          title: "What is the Multichain?",
-          category: "개념 / 이해",
-          desc: "",
-          fId: 0,
-        },
-        {
-          title: "About IDO",
-          category: "개념 / 이해",
-          desc: "",
-          fId: 0,
-        },
-        {
-          title: "What is the HOC?",
-          category: "기술 / 개발",
-          desc: "",
-          fId: 1,
-        },
-        {
-          title: "React Custom Hook에 대하여",
-          category: "기술 / 개발",
-          desc: "",
-          fId: 1,
-        }
-      ]
+      data: ARTICLE
     }
   }
 }
