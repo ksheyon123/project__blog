@@ -12,17 +12,15 @@ import {
 const StyledLayout = styled.main`
 width : 100vw;
 height : 100vh;
-padding : 60px 0px 0px 120px;
-  
+padding : 60px 0px 0px 0px;
+  overflow: scroll;
 `;
 
 const Layout: React.FC = ({ children }) => {
 
-  const isNavigationActivated = useRecoilValue(navigationState);
-
   return (
     <>
-      <Navbar isActive={isNavigationActivated} />
+      <Navbar />
       <Header />
       <StyledLayout>
         {children}

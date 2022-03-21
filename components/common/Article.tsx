@@ -11,10 +11,20 @@ const StyledArticle = styled.article`
   width : 100%;
   height : 200px;
   border : 1px solid #EBEBEB;
-  border-radius : 10px;
   margin-bottom : 15px;
+  text-align: center;
+  padding : 20px 0px;
   &:last-of-type  {
     margin-bottom : 0px;
+  }
+  & span {
+    margin-bottom : 5px;
+    &:last-of-type {
+      margin-bottom: 0px;
+    }
+    &:nth-child(1) {
+      ${props => props.theme.h1}
+    }
   }
 `;
 
@@ -22,13 +32,17 @@ const Article: React.FC<Props> = (props) => {
 
   const {
     title,
+    subtitle,
     desc,
+    category,
     fId
   } = props;
 
   return (
     <StyledArticle>
-      {title}
+      <span>{title}</span><br />
+      {!!subtitle && (<><span>{subtitle}</span><br /></>)}
+      <span>{category}</span><br />
       {desc}
     </StyledArticle>
   )

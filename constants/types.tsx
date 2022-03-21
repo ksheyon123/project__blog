@@ -8,6 +8,8 @@ export type DirectionType = {
 
 export type ArticleType = {
   title: string;
+  subtitle: string;
+  category: string;
   desc: string;
   fId: number;
 }

@@ -18,7 +18,7 @@ const StyledCard = styled.article`
 const StyledListView = styled.section<DirectionType>`
   display : flex;
   flex-direction: column;
-  padding : 15px;
+  padding : 15px 0px;
 `;
 
 const ListView: React.FC<Props> = (props) => {
