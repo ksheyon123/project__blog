@@ -12,6 +12,7 @@ import { ArticleType } from "../../constants/types";
 const StyledDetail = styled.section`
   display: flex;
   width: 100vw;
+  height : 100%;
   padding : 15px 0px;
   background-color: ${props => props.theme.mono06Div};
   overflow: scroll;
@@ -21,6 +22,21 @@ const StyledWrapper = styled.article`
   width : 800px;
   margin : 0px auto;
   background-color: ${props => props.theme.mono100};
+  & > div.main-content {
+    ${props => props.theme.b1};
+    color : ${props => props.theme.mono03};
+    line-height: 32px;
+    & p {
+      & > span.murmur {
+        ${props => props.theme.b3}
+      }
+      
+    }
+    & pre {
+        ${props => props.theme.b2}
+        color : ${props => props.theme.mono01}
+      }
+  }
 `
 
 const Details = () => {

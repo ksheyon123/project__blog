@@ -14,9 +14,15 @@ export type ArticleType = {
   desc: string;
   fId: number;
   relation?: string[];
+  createdAt: number;
 }
 
 export type NavigationType = {
   pId: number;
+  name: string;
+}
+
+export type ComboBoxType = {
+  value: string | number;
   name: string;
 }

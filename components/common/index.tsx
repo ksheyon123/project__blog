@@ -4,3 +4,4 @@ export { Input } from './Input';
 export { Header } from './Header';
 export { ListView } from './ListView';
 export { Article } from './Article';
+export { ComboBox } from './ComboBox';

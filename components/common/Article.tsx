@@ -15,6 +15,7 @@ const StyledArticle = styled.article`
   margin-bottom : 15px;
   text-align: center;
   padding : 20px 0px;
+  background-color: ${props => props.theme.mono100};
   cursor : pointer;
   &:last-of-type  {
     margin-bottom : 0px;

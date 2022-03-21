@@ -11,6 +11,7 @@ const StyledLayout = styled.main`
   height : 100vh;
   padding : 60px 0px 0px 0px;
   overflow: scroll;
+  background-color: ${props => props.theme.mono06Div};
 `;
 
 const Layout: React.FC = ({ children }) => {
