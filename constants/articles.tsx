@@ -1,41 +1,18 @@
 import { ArticleType } from "../constants/types";
 import { TypeOfID } from "./enum";
 
+// pre-defines : span.murmur, span.str, a
+
 export const ARTICLE: ArticleType[] = [
   {
     id: 0,
-    title: "What is the Bridge?",
+    title: "Interchain에서 브릿지(Bridge)란?",
     type: "개념 / 이해",
     about: "Blockchain",
     desc: `<p>
-     브릿지(Bridge)는 이종의 Blockchain을 연결하기 위한 기술 / 기능입니다. <br />
-     브릿지(Bridge)는 이종의 Blockchain을 연결하기 위한 기술 / 기능입니다. <br />
-     브릿지(Bridge)는 이종의 Blockchain을 연결하기 위한 기술 / 기능입니다. <br />
-     브릿지(Bridge)는 이종의 Blockchain을 연결하기 위한 기술 / 기능입니다. <br />
-     브릿지(Bridge)는 이종의 Blockchain을 연결하기 위한 기술 / 기능입니다. <br />
-     브릿지(Bridge)는 이종의 Blockchain을 연결하기 위한 기술 / 기능입니다. <br />
-     브릿지(Bridge)는 이종의 Blockchain을 연결하기 위한 기술 / 기능입니다. <br />
-     브릿지(Bridge)는 이종의 Blockchain을 연결하기 위한 기술 / 기능입니다. <br />
-     브릿지(Bridge)는 이종의 Blockchain을 연결하기 위한 기술 / 기능입니다. <br />
-     브릿지(Bridge)는 이종의 Blockchain을 연결하기 위한 기술 / 기능입니다. <br />
-     브릿지(Bridge)는 이종의 Blockchain을 연결하기 위한 기술 / 기능입니다. <br />
-     브릿지(Bridge)는 이종의 Blockchain을 연결하기 위한 기술 / 기능입니다. <br />
-     브릿지(Bridge)는 이종의 Blockchain을 연결하기 위한 기술 / 기능입니다. <br />
-     브릿지(Bridge)는 이종의 Blockchain을 연결하기 위한 기술 / 기능입니다. <br />
-     브릿지(Bridge)는 이종의 Blockchain을 연결하기 위한 기술 / 기능입니다. <br />
-     브릿지(Bridge)는 이종의 Blockchain을 연결하기 위한 기술 / 기능입니다. <br />
-     브릿지(Bridge)는 이종의 Blockchain을 연결하기 위한 기술 / 기능입니다. <br />
-     브릿지(Bridge)는 이종의 Blockchain을 연결하기 위한 기술 / 기능입니다. <br />
-     브릿지(Bridge)는 이종의 Blockchain을 연결하기 위한 기술 / 기능입니다. <br />
-     브릿지(Bridge)는 이종의 Blockchain을 연결하기 위한 기술 / 기능입니다. <br />
-     브릿지(Bridge)는 이종의 Blockchain을 연결하기 위한 기술 / 기능입니다. <br />
-     브릿지(Bridge)는 이종의 Blockchain을 연결하기 위한 기술 / 기능입니다. <br />
-     브릿지(Bridge)는 이종의 Blockchain을 연결하기 위한 기술 / 기능입니다. <br />
-     브릿지(Bridge)는 이종의 Blockchain을 연결하기 위한 기술 / 기능입니다. <br />
-     브릿지(Bridge)는 이종의 Blockchain을 연결하기 위한 기술 / 기능입니다. <br />
-     브릿지(Bridge)는 이종의 Blockchain을 연결하기 위한 기술 / 기능입니다. <br />
-     브릿지(Bridge)는 이종의 Blockchain을 연결하기 위한 기술 / 기능입니다. <br />
-     브릿지(Bridge)는 이종의 Blockchain을 연결하기 위한 기술 / 기능입니다람쥐. <br />
+     브릿지(Bridge)는 이종의 Blockchain을 연결하기 위한 기술 / 기능?이라고 생각합니다. <br />
+     최근 Blockchain Game Platform 개발을 위해 기술분석을 진행하면서 이해한 부분들을 정리하려고 합니다. <br />
+     <a href="https://www.naver.com">Bridge 정보</a>
     </p>`,
     fId: TypeOfID.BLOCKCHAIN,
     relation: ["Interchain", "Crosschain"],
@@ -43,7 +20,7 @@ export const ARTICLE: ArticleType[] = [
   },
   {
     id: 1,
-    title: "About IDO",
+    title: "IDO에 대하여",
     type: "개념 / 이해",
     about: "Blockchain",
     desc: "",
@@ -53,7 +30,7 @@ export const ARTICLE: ArticleType[] = [
   },
   {
     id: 2,
-    title: "What is the HOC?",
+    title: "고차컴포넌트(HOC)란?",
     type: "기술 / 개발",
     about: "React",
     desc: "",
@@ -85,5 +62,14 @@ export const ARTICLE: ArticleType[] = [
     </p>`,
     fId: TypeOfID.GIT,
     createdAt: new Date(2022, 3, 21).valueOf(),
+  },
+  {
+    id: 5,
+    title: "Dispatch<SetStateAction<Type>>란?",
+    type: "기술 / 개발",
+    about: "React",
+    desc: ``,
+    fId: TypeOfID.REACT,
+    createdAt: new Date(2022, 3, 22).valueOf(),
   }
 ]

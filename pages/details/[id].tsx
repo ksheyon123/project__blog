@@ -8,33 +8,44 @@ import {
   ARTICLE
 } from "../../constants/articles";
 import { ArticleType } from "../../constants/types";
-
+import {
+  theme
+} from "../../styles/theme";
 const StyledDetail = styled.section`
   display: flex;
   width: 100vw;
   height : 100%;
   padding : 15px 0px;
-  background-color: ${props => props.theme.mono06Div};
+  background-color: ${theme.mono06Div};
   overflow: scroll;
 `;
 
 const StyledWrapper = styled.article`
   width : 800px;
   margin : 0px auto;
-  background-color: ${props => props.theme.mono100};
+  background-color: ${theme.mono100};
   & > div.main-content {
-    ${props => props.theme.b1};
-    color : ${props => props.theme.mono03};
+    ${theme.b1};
+    color : ${theme.mono03};
     line-height: 32px;
     & p {
       & > span.murmur {
-        ${props => props.theme.b3}
+        ${theme.b3};
       }
-      
+      & > span.str {
+        font-weight: ${theme.medium};
+      }
+      & a {
+        ${theme.b3};
+        color : ${theme.mono03};
+        padding : 5px 10px;
+        border : 1px solid ${theme.mono06Div};
+        border-radius : 10px;
+      }
     }
     & pre {
-        ${props => props.theme.b2}
-        color : ${props => props.theme.mono01}
+        ${theme.b2}
+        color : ${theme.mono01}
       }
   }
 `

@@ -2,7 +2,8 @@ import { ReactElement } from "react";
 import {
   Layout,
   ListView,
-  ComboBox
+  ComboBox,
+  Wrapper
 } from "../components/common/index";
 import { ArticleType } from "../constants/types";
 import {
@@ -18,7 +19,7 @@ const Home = ({ data }: Props) => {
 
   return (
     <>
-      <ComboBox list={[{ value: 0, name: "최신순" }, { value: 1, name: "옛날순" }]} handleOnChange={() => { }} initialValue={0} />
+      <ComboBox list={[{ value: 0, name: "최신순" }, { value: 1, name: "옛날순" }]} handleOnChange={() => { }} initialValue={"최신순"} />
       <ListView direction={"column"} data={data} />
     </>
   )
