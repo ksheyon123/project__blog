@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import { ArticleType } from "../../constants/types";
 import { theme } from '../../styles/theme';
-
+import { Divider } from "./index";
 interface Props extends ArticleType {
 
 }
@@ -64,10 +64,11 @@ const Article: React.FC<Props> = (props) => {
         <span className="title">{title}</span><br />
         {!!type && (<><span className="type">{type}</span><br /></>)}
         {!!about && (<><span className="about">{about}</span><br /></>)}
+        <Divider />
         <div>
           {!!relation && relation.map((el, idx) => {
             return (
-              <span key={"#" + idx}>#{el}</span>
+              <span className="relation" key={"#" + idx}>#{el}</span>
             )
           })}
         </div>

@@ -7,9 +7,9 @@ export const theme = {
   mono06Div: "#EBEBEB",
   mono100: "#FFF",
 
-  demiLight: 350,
+  demiLight: 30,
   regular: 400,
-  medium: 600,
+  medium: 500,
 
   // h1 > ~ h3 > t1 > ~ t3 > b1 > ~ b3
   h1: {

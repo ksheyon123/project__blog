@@ -6,7 +6,7 @@ import {
 } from "../../constants/types";
 import icArrowUp from "../../assets/ic_arrow_up.png";
 import icArrowDown from "../../assets/ic_arrow_down.png";
-
+import { theme } from "../../styles/theme";
 interface Props {
   width?: string;
   list: ComboBoxType[];
@@ -21,10 +21,11 @@ const StyledComboBox = styled.div<{ width: string; isActive: boolean; }>`
   width : ${props => props.width};
   height : 40px;
   padding : 5px 40px 5px 15px;
-  background-color: ${props => props.theme.mono100};
+  background-color: ${theme.mono100};
   background-position: center left 0px;
   background-repeat: no-repeat;
   background-size: 100px 100px;
+  border : 1px solid ${theme.mono06Div};
   ${props => {
     const img: StaticImageData = props.isActive ? icArrowUp : icArrowDown;
     return `
@@ -33,13 +34,24 @@ const StyledComboBox = styled.div<{ width: string; isActive: boolean; }>`
   }}
   & > ul {
     position: absolute;
+    width : ${props => props.width};
     top : 40px;
-    background-color: ${props => props.theme.mono100};
+    left : -1px;
+    background-color: ${theme.mono100};
+    border : 1px solid ${theme.mono06Div};
     ${props => props.isActive ? `
      display : block;
     ` : `
-    display : none;
+      display : none;
     `};
+    & > li {
+      padding : 0px 5px;
+      margin-bottom : 5px;
+      &:last-of-type {
+      margin-bottom : 0px;
+
+      }
+    }
   }
   
 `;

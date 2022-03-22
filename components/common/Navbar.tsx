@@ -8,8 +8,12 @@ import {
   NAV__NAME
 } from "../../constants/index";
 import {
+  ArticleType,
   NavigationType
 } from "../../constants/types";
+import {
+  ARTICLE
+} from "../../constants/articles";
 import { theme } from '../../styles/theme';
 
 const StyledNavbar = styled.nav<{ isActive: boolean }>`
@@ -20,7 +24,7 @@ const StyledNavbar = styled.nav<{ isActive: boolean }>`
   height : calc(100vh - 60px);
   border-right : 1px solid #EBEBEB;
   background-color: #FFF;
-  /* ${props => props.isActive ? `display : block;` : `display : none`} */
+  ${props => props.isActive ? `display : block;` : `display : none`}
 `;
 
 const Navbar: React.FC = () => {
@@ -28,8 +32,8 @@ const Navbar: React.FC = () => {
 
   return (
     <>
+      <NavDrawer />
       <StyledNavbar isActive={isActive}>
-        <NavDrawer />
         {
           NAV__NAME.map((el: NavigationType, idx: number) => {
             return (
@@ -43,15 +47,16 @@ const Navbar: React.FC = () => {
 }
 
 const StyledNavDrawer = styled.div<{ isActive: boolean }>`
-  position : relative;
-  top : 0px;
+  position : absolute;
+  z-index : 999;
+  top : 60px;
   ${props => props.isActive ? `
-  left : 0px;
+  left : 100px;
   border-top: 30px solid transparent;
   border-bottom: 30px solid transparent;
   border-right: 20px solid #323232;
   ` : `
-  right : 0px;
+  left : 0px;
   border-top: 30px solid transparent;
   border-bottom: 30px solid transparent;
   border-left: 20px solid #323232;
@@ -76,9 +81,12 @@ const StyledNavName = styled.div`
 `;
 
 const NavNameWrapper: React.FC<NavigationType> = ({ pId, name }) => {
+
+  const cnt: number = ARTICLE.reduce((cnt: number, el: ArticleType) => (pId === el.fId) ? cnt + 1 : cnt + 0, 0);
+
   return (
     <StyledNavName>
-      {name}
+      {name} ({cnt})
     </StyledNavName>
   )
 }
