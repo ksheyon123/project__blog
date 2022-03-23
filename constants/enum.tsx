@@ -4,5 +4,6 @@ export enum TypeOfID {
   VANILLAJS,
   NEXTJS,
   CSS,
-  GIT
+  GIT,
+  WEBPACK
 }

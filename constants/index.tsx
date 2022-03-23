@@ -30,5 +30,9 @@ export const NAV__NAME: NavigationType[] = [
   {
     pId: TypeOfID.GIT,
     name: "Git"
+  },
+  {
+    pId: TypeOfID.WEBPACK,
+    name: "Webpack"
   }
 ]

@@ -7,7 +7,7 @@ export const ARTICLE: ArticleType[] = [
   {
     id: 0,
     title: "Interchain에서 브릿지(Bridge)란?",
-    type: "개념 / 이해",
+    type: "개념 / 정의",
     about: "Blockchain",
     desc: `<p>
      브릿지(Bridge)는 이종의 Blockchain을 연결하기 위한 기술 / 기능?이라고 생각합니다. <br />
@@ -21,7 +21,7 @@ export const ARTICLE: ArticleType[] = [
   {
     id: 1,
     title: "IDO에 대하여",
-    type: "개념 / 이해",
+    type: "개념 / 정의",
     about: "Blockchain",
     desc: "",
     fId: TypeOfID.BLOCKCHAIN,
@@ -31,7 +31,7 @@ export const ARTICLE: ArticleType[] = [
   {
     id: 2,
     title: "고차컴포넌트(HOC)란?",
-    type: "기술 / 개발",
+    type: "개념 / 정의",
     about: "React",
     desc: "",
     fId: TypeOfID.REACT,
@@ -40,7 +40,7 @@ export const ARTICLE: ArticleType[] = [
   {
     id: 3,
     title: "React Custom Hook에 대하여",
-    type: "기술 / 개발",
+    type: "개념 / 정의",
     about: "React",
     desc: "",
     fId: TypeOfID.REACT,
@@ -49,7 +49,7 @@ export const ARTICLE: ArticleType[] = [
   {
     id: 4,
     title: "Git 프로젝트 별 사용자 이름 설정",
-    type: "기술 / 개발",
+    type: "개념 / 정의",
     about: "Git",
     desc: `<p>
     회사에서 받은 내 Mac Book은 당연하게도 업무용 Git 계정이 설정되어있다.<br />
@@ -66,10 +66,22 @@ export const ARTICLE: ArticleType[] = [
   {
     id: 5,
     title: "Dispatch<SetStateAction<Type>>란?",
-    type: "기술 / 개발",
+    type: "개념 / 정의",
     about: "React",
     desc: ``,
     fId: TypeOfID.REACT,
     createdAt: new Date(2022, 3, 22).valueOf(),
+  },
+  {
+    id: 6,
+    title: "Webpack사용법 (1)",
+    type: "기술 / 개발",
+    about: "Webpack",
+    desc: `<p>
+      이번 프로젝트를 하면서 Blockchain을 Chrome Extension을 통해 개발할 것 같아서, 미뤄왔던 Webpack에 대해서 공부하고자 합니다. <br /><span class="murmur">(Chrome Extension을 배포하려면 React Project를 Eject 해야하는 것 같습니다.)</span><br />
+      기초가 되는 내용은 오른쪽의 Link와 Docs를 통해 공부했습니다. <a href="https://www.youtube.com/watch?v=IZGNcSuwBZs&t=888s">Basic Tutorials</a><br />
+    </p>`,
+    fId: TypeOfID.WEBPACK,
+    createdAt: new Date(2022, 3, 23).valueOf(),
   }
 ]
