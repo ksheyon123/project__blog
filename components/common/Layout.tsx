@@ -9,7 +9,6 @@ import {
 const StyledLayout = styled.main`
   width : 100vw;
   height : 100vh;
-  padding : 60px 0px 0px 0px;
   overflow: scroll;
   background-color: ${props => props.theme.mono06Div};
 `;
@@ -19,7 +18,7 @@ const Layout: React.FC = ({ children }) => {
   return (
     <>
       <Navbar />
-      <Header />
+      {/* <Header /> */}
       <StyledLayout>
         {children}
       </StyledLayout>

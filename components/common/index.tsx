@@ -7,3 +7,4 @@ export { Article } from './Article';
 export { ComboBox } from './ComboBox';
 export { Wrapper } from './Wrapper';
 export { Divider } from './Divider';
+export { Logo } from './Logo';

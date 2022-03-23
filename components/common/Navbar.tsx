@@ -14,14 +14,17 @@ import {
 import {
   ARTICLE
 } from "../../constants/articles";
+import {
+  Input
+} from "./index";
 import { theme } from '../../styles/theme';
 
 const StyledNavbar = styled.nav<{ isActive: boolean }>`
   position : absolute;
-  top : 60px;
+  top : 0px;
   left : 0;
-  width : ${props => props.isActive ? "120px" : "0px"};
-  height : calc(100vh - 60px);
+  width : ${props => props.isActive ? "140px" : "0px"};
+  height : 100vh;
   border-right : 1px solid #EBEBEB;
   background-color: #FFF;
   ${props => props.isActive ? `display : block;` : `display : none`}
@@ -34,6 +37,7 @@ const Navbar: React.FC = () => {
     <>
       <NavDrawer />
       <StyledNavbar isActive={isActive}>
+        <Input type="Search" handleOnChange={() => { }} value="0" />
         {
           NAV__NAME.map((el: NavigationType, idx: number) => {
             return (
@@ -49,9 +53,9 @@ const Navbar: React.FC = () => {
 const StyledNavDrawer = styled.div<{ isActive: boolean }>`
   position : absolute;
   z-index : 999;
-  top : 60px;
+  top : 40px;
   ${props => props.isActive ? `
-  left : 100px;
+  left : 120px;
   border-top: 30px solid transparent;
   border-bottom: 30px solid transparent;
   border-right: 20px solid #323232;

@@ -20,7 +20,6 @@ const StyledHeader = styled.header`
 const Header: React.FC = () => {
   return (
     <StyledHeader>
-      <Input type="Search" />
     </StyledHeader>
   )
 }

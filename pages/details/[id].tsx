@@ -1,6 +1,4 @@
 import type { ReactElement } from "react";
-import { useState } from "react";
-import Head from 'next/head';
 import styled from "styled-components";
 import { useRouter } from 'next/router';
 import { Layout } from "../../components/common/index";

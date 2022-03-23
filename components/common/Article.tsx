@@ -68,7 +68,9 @@ const Article: React.FC<Props> = (props) => {
         <div>
           {!!relation && relation.map((el, idx) => {
             return (
-              <span className="relation" key={"#" + idx}>#{el}</span>
+              <Link href={`/keywords/${el.toLowerCase()}`} passHref={true}>
+                <span className="relation" key={"#" + idx}>#{el}</span>
+              </Link>
             )
           })}
         </div>
