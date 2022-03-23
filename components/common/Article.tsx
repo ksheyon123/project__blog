@@ -59,7 +59,7 @@ const Article: React.FC<Props> = (props) => {
   }
 
   return (
-    <Link href={`/details/${id}`}>
+    <Link href={`/details/${id}`} passHref={true}>
       <StyledArticle onClick={() => goTo(fId)}>
         <span className="title">{title}</span><br />
         {!!type && (<><span className="type">{type}</span><br /></>)}
