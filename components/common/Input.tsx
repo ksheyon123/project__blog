@@ -12,18 +12,22 @@ interface Props extends InputType {
 const StyledInput = styled.div<InputType>`
   width : 100%;
   height : 40px;
-  box-sizing: border-box;
+  display : flex;
+  align-items: center;
   & > input {
     padding : 10px;
     width : 100%;
     height : 100%;
     border : none;
+    ${props => props.type === "Search" && `
+    padding-left : 30px;
+    background : url(/assets/ic_search.png) center left 5px no-repeat;
+    background-size : 20px 20px;
+  `}
   }
   ${props => props.type === "Normal" && `
   `}
-  ${props => props.type === "Search" && `
-  padding-left : 40px;
-  `}
+  
 `;
 
 const Input: React.FC<Props> = (props) => {

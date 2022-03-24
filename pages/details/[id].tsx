@@ -27,11 +27,18 @@ const StyledWrapper = styled.article`
     color : ${theme.mono03};
     line-height: 32px;
     & p {
+      ${theme.b3};
       & > span.murmur {
         ${theme.b3};
       }
       & > span.str {
         font-weight: ${theme.medium};
+      }
+      & > span.italic {
+        font-style : italic;
+      }
+      & > span.underline {
+        text-decoration: underline;
       }
       & a {
         ${theme.b3};
@@ -40,6 +47,17 @@ const StyledWrapper = styled.article`
         border : 1px solid ${theme.mono06Div};
         border-radius : 10px;
       }
+    }
+    & > div.img-box {
+      display : flex;
+        width : 800px;
+        height : auto;
+        justify-content: center;
+        align-items: center;
+        & img {
+          width : 100%;
+          height : 100%;
+        }
     }
     & pre {
         ${theme.b2}

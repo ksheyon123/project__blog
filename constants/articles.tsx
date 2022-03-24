@@ -83,5 +83,25 @@ export const ARTICLE: ArticleType[] = [
     </p>`,
     fId: TypeOfID.WEBPACK,
     createdAt: new Date(2022, 3, 23).valueOf(),
+  },
+  {
+    id: 7,
+    title: "IPFS란?",
+    type: "개념 / 정의",
+    about: "Blockchain",
+    desc: `<p>
+      IPFS(InterPlanetary File System)는 Distributed File System을 통해 데이터를 저장하고 공유하는 프로토콜(Protocol)과 P2P 네트워크입니다. IPFSsms <span class="italic underline">Global-namespace</span>에 연결중인 모든 컴퓨팅 장비에서 <span class="italic underline">Content-addressing</span>을 사용하여 각 파일을 고유하게 확인합니다.<br />
+     </p>
+     <h3>Content-addressing & CIDs</h3>
+     <p>
+     CIDs(Content Identifiers)는 IPFS에서 Material을 가르키는데 사용되는 label(Address)입니다.<br />
+      CIDs는 Content가 저장된 장소를 지시하는 것이 아닌 Content 자체에 기반한 일종의 주소를 형성합니다.<br />
+     </p>
+     <div class="img-box">
+        <img src="/assets/7/7_1.png" alt="7_1"/>
+      </div>
+     `,
+    fId: TypeOfID.BLOCKCHAIN,
+    createdAt: new Date(2022, 3, 24).valueOf(),
   }
 ]

@@ -1,11 +1,8 @@
 import React, { Dispatch, SetStateAction, useState } from 'react';
 import styled from "styled-components";
-import Image from 'next/image';
 import {
   ComboBoxType
 } from "../../constants/types";
-import icArrowUp from "../../assets/ic_arrow_up.png";
-import icArrowDown from "../../assets/ic_arrow_down.png";
 import { theme } from "../../styles/theme";
 interface Props {
   width?: string;
@@ -21,17 +18,11 @@ const StyledComboBox = styled.div<{ width: string; isActive: boolean; }>`
   width : ${props => props.width};
   height : 40px;
   padding : 5px 40px 5px 15px;
-  background-color: ${theme.mono100};
-  background-position: center left 0px;
-  background-repeat: no-repeat;
-  background-size: 100px 100px;
   border : 1px solid ${theme.mono06Div};
-  ${props => {
-    const img: StaticImageData = props.isActive ? icArrowUp : icArrowDown;
-    return `
-    background-image: url("${img}");
-    `;
-  }}
+  background: ${props => `url(${props.isActive ? "/assets/ic_arrow_up.png" : "/assets/ic_arrow_down.png"}) center right 10px no-repeat`};
+  background-size: 13px 13px;
+
+  background-color: ${theme.mono100};
   & > ul {
     position: absolute;
     width : ${props => props.width};

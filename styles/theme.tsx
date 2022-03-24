@@ -46,5 +46,8 @@ export const theme = {
 
   b3: {
     fontSize: "14px",
+  },
+  b4: {
+    fontSize: "12px",
   }
 }
