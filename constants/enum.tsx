@@ -1,4 +1,5 @@
 export enum TypeOfID {
+  ALL,
   BLOCKCHAIN,
   REACT,
   VANILLAJS,

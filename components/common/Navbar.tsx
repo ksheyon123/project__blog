@@ -2,7 +2,8 @@ import React from 'react';
 import styled from "styled-components";
 import { useRecoilState, useRecoilValue } from "recoil";
 import {
-  navigationState
+  navigationState,
+  navigationParamsState
 } from "../../states/atom";
 import {
   NAV__NAME
@@ -78,21 +79,26 @@ const NavDrawer: React.FC = () => {
   )
 }
 
-const StyledNavName = styled.div`
+const StyledNavName = styled.div < { isSelected: boolean }> `
   ${props => props.theme.b3};
-  color : ${theme.mono03};
+  color : ${props => props.isSelected ? theme.mono00 : theme.mono03};
   margin-bottom : 10px;
 `;
 
 const NavNameWrapper: React.FC<NavigationType> = ({ pId, name }) => {
-
+  const [navIdx, setNavIdx] = useRecoilState(navigationParamsState);
+  const totalCnt = ARTICLE.length;
   const cnt: number = ARTICLE.reduce((cnt: number, el: ArticleType) => (pId === el.fId) ? cnt + 1 : cnt + 0, 0);
+  const isSelected: boolean = pId === navIdx;
+
+  const jsx = pId === 0 ? (<div>{name} ({totalCnt})</div>) : <div>{name} ({cnt})</div>
 
   return (
-    <StyledNavName>
-      {name} ({cnt})
+    <StyledNavName isSelected={isSelected} onClick={() => setNavIdx(pId)}>
+      {jsx}
     </StyledNavName>
   )
+
 }
 
 export { Navbar };

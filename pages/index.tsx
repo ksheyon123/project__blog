@@ -1,4 +1,5 @@
 import { ReactElement } from "react";
+import { useRecoilValue } from "recoil";
 import styled from "styled-components";
 import {
   Layout,
@@ -10,6 +11,8 @@ import { ArticleType } from "../constants/types";
 import {
   ARTICLE
 } from "../constants/articles";
+import { filteredArticlesState } from "../states/selector";
+
 interface Props {
   data: ArticleType[];
 }
@@ -27,12 +30,14 @@ const FlexWrapper = styled.div`
 
 const Home = ({ data }: Props) => {
 
+  const articles = useRecoilValue(filteredArticlesState);
+
   return (
     <>
       <FlexWrapper>
         <ComboBox list={[{ value: 0, name: "최신순" }, { value: 1, name: "옛날순" }]} handleOnChange={() => { }} initialValue={"최신순"} />
       </FlexWrapper>
-      <ListView direction={"column"} data={data} />
+      <ListView direction={"column"} data={articles} />
     </>
   )
 }

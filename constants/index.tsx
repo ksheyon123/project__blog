@@ -8,6 +8,10 @@ export const PATH__NAME = {
 
 export const NAV__NAME: NavigationType[] = [
   {
+    pId: TypeOfID.ALL,
+    name: "All"
+  },
+  {
     pId: TypeOfID.BLOCKCHAIN,
     name: "Blockchain"
   },

@@ -22,7 +22,7 @@ const ListView: React.FC<Props> = (props) => {
   const {
     direction,
     data
-  } = props
+  } = props;
 
   return (
     <StyledListView direction={direction}>
