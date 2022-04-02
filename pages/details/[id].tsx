@@ -67,9 +67,7 @@ const StyledWrapper = styled.article`
 `
 
 const Details = () => {
-
   const router = useRouter();
-
   const { id } = router.query;
 
   const item = ARTICLE.find(el => {
