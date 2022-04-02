@@ -1,5 +1,5 @@
 export { Layout } from './Layout';
-export { Navbar } from './Navbar';
+export { Navbar } from './Navbar/Navbar';
 export { Input } from './Input';
 export { Header } from './Header';
 export { ListView } from './ListView';
