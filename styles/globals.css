@@ -24,3 +24,6 @@ ul {
   padding: 0px;
   margin: 0px;
 }
+div.flex {
+  display: flex;
+}

@@ -86,22 +86,52 @@ export const ARTICLE: ArticleType[] = [
   },
   {
     id: 7,
-    title: "IPFS란?",
+    title: "IPFS란?(1)",
     type: "개념 / 정의",
     about: "Blockchain",
     desc: `<p>
       IPFS(InterPlanetary File System)는 Distributed File System을 통해 데이터를 저장하고 공유하는 프로토콜(Protocol)과 P2P 네트워크입니다. IPFSsms <span class="italic underline">Global-namespace</span>에 연결중인 모든 컴퓨팅 장비에서 <span class="italic underline">Content-addressing</span>을 사용하여 각 파일을 고유하게 확인합니다.<br />
      </p>
+     <p>
+     아래는 IPFS를 이해하기 위한 기본적인 구성 요소입니다.
+     </P>
      <h3>Content-addressing & CIDs</h3>
      <p>
      CIDs(Content Identifiers)는 IPFS에서 Material을 가르키는데 사용되는 label(Address)입니다.<br />
       CIDs는 Content가 저장된 장소를 지시하는 것이 아닌 Content 자체에 기반한 일종의 주소를 형성합니다.<br />
      </p>
-     <div class="img-box">
-        <img src="/assets/7/7_1.png" alt="7_1"/>
+      <div class="img-box">
+        <img src="/assets/7/7_1.png" alt="7_1" unsafe_url="https://www.freecodecamp.org/news/technical-guide-to-ipfs-decentralized-storage-of-web3/"/>
       </div>
+     <h3>Merkle DAGs(Directed Acyclic Graphs)</h3>
+     <p>
+     Merkle DAG은 Merkle Tree와 방향성 비순환 그래프(DAGs)의 조합으로 머클트리는 P2P네트워크에서 전달되는 데이터 블록이 변경되지 않음을 증명하는데 사용됩니다. 일반적으로 Balance를 기록하는 Blockchain의 tx와 다르게 Merkle DAG은 Data를 암호화?합니다. 
+     </p>
+     <div class="img-box">
+        <img src="/assets/7/7_2.png" alt="7_1" unsafe_url="https://www.freecodecamp.org/news/technical-guide-to-ipfs-decentralized-storage-of-web3/"/>
+      </div>
+      <h3>DHTs(Distributed Hash Tables)</h3>
+      <p>
+      분산 해시 테이블(DHTs)은 키를 값에 매핑할 수 있는 구조를 구현하는 데이터 구조입니다. IPFS는 어떤 Peer가 당신이 찾는 콘텐츠를 호스팅하고 있는지 찾기 위해  분산 해시 테이블(DHTs)을 사용하며, 분산 해시 테이블은 테이블이 분산 네트워크의 모든 Peer로 분할되는 테이블입니다. <br />
+      </p>
+      <h3>Pin</h3>
+      <p>
+      </p>
      `,
     fId: TypeOfID.BLOCKCHAIN,
     createdAt: new Date(2022, 3, 24).valueOf(),
+  },
+  {
+    id: 8,
+    title: "IPFS란?(2)",
+    type: "개념 / 정의",
+    about: "Blockchain",
+    desc: `
+      <p>
+      IPFS 사용법을 조사하면서 bitswap, bootstrap, swarm 등의 커맨드와 사용법 등을 확인하려고 합니다. 최근 진행한 기술 조사에서 NFT를 저장할 Storage로 IPFS 활용을 위해 자료를 조사했습니다. 아직 활용에 대해서 의문인 부분은 많지만 우선 이해한 부분을 정리해보고자 합니다.
+     </p>
+     `,
+    fId: TypeOfID.BLOCKCHAIN,
+    createdAt: new Date(2022, 4, 5).valueOf(),
   }
 ]

@@ -9,6 +9,7 @@ import { ArticleType } from "../../constants/types";
 import {
   theme
 } from "../../styles/theme";
+import { getDateAndMonth } from "../../utils/utils";
 const StyledDetail = styled.section`
   display: flex;
   width: 100vw;
@@ -21,11 +22,24 @@ const StyledDetail = styled.section`
 const StyledWrapper = styled.article`
   width : 800px;
   margin : 0px auto;
+  border-radius: 5px;
   background-color: ${theme.mono100};
   & > div.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & > div.content-title {
+      ${theme.h1};
+
+    }
+  }
+  & > div.desc-content {
     ${theme.b1};
+    background-color: ${theme.mono100};
     color : ${theme.mono03};
     line-height: 32px;
+    padding : 10px;
     & p {
       ${theme.b3};
       & > span.murmur {
@@ -49,11 +63,8 @@ const StyledWrapper = styled.article`
       }
     }
     & > div.img-box {
-      display : flex;
-        width : 800px;
+        width : 100%;
         height : auto;
-        justify-content: center;
-        align-items: center;
         & img {
           width : 100%;
           height : 100%;
@@ -63,6 +74,10 @@ const StyledWrapper = styled.article`
         ${theme.b2}
         color : ${theme.mono01}
       }
+  }
+  & > div.tap {
+    padding : 10px;
+    justify-content: space-between;
   }
 `
 
@@ -82,23 +97,38 @@ const Details = () => {
     desc,
     type,
     about,
-    relation
+    relation,
+    createdAt
   } = item as ArticleType
+
+  const _dateString = getDateAndMonth(new Date(createdAt));
 
   return (
     <StyledDetail>
       <StyledWrapper>
-        <div>{title}</div>
-        <div>{type}</div>
-        <div>{about}</div>
-        {relation?.map((el: any) => {
-          return (
-            <>
-              {el}
-            </>
-          )
-        })}
-        <div className="main-content" dangerouslySetInnerHTML={{
+        <div className="tap flex">
+          <div>
+            <span className="date">
+              {_dateString}
+            </span>
+          </div>
+          <div>
+            <span><img /></span>
+          </div>
+        </div>
+        <div className="main-content">
+          <div className="content-title">{title}</div>
+          <div>{type}</div>
+          <div>{about}</div>
+          {relation?.map((el: any) => {
+            return (
+              <>
+                {el}
+              </>
+            )
+          })}
+        </div>
+        <div className="desc-content" dangerouslySetInnerHTML={{
           __html: desc
         }}>
         </div>

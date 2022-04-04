@@ -29,8 +29,8 @@ const NavLogo: React.FC = () => {
     window.location.href = "/";
   }
   return (
-    <StyledNavLogo onClick={() => handleOnClick()}>
-      <div>
+    <StyledNavLogo >
+      <div onClick={() => handleOnClick()}>
         Devojs
       </div>
     </StyledNavLogo>
