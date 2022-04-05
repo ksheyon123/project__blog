@@ -128,7 +128,13 @@ export const ARTICLE: ArticleType[] = [
     about: "Blockchain",
     desc: `
       <p>
+      IPFS File Sharing과 Delay
+      </p>
+      <p>
       IPFS 사용법을 조사하면서 bitswap, bootstrap, swarm 등의 커맨드와 사용법 등을 확인하려고 합니다. 최근 진행한 기술 조사에서 NFT를 저장할 Storage로 IPFS 활용을 위해 자료를 조사했습니다. 아직 활용에 대해서 의문인 부분은 많지만 우선 이해한 부분을 정리해보고자 합니다.
+     </p>
+     <p>
+      IPFS는 Pinning한 컨텐츠를 다운받아 Caching한 사용자의 수가 많을 수록 해당 컨텐츠를 가져오는 속도가 빠르게 된다. 다만, 이 부분에서 내가 A File을 올렸을 때, 아무도 해당 컨텐츠를 다운받지 않았다면 다운로드가 오래걸릴 수 있습니다.
      </p>
      `,
     fId: TypeOfID.BLOCKCHAIN,
