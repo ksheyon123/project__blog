@@ -1,5 +1,6 @@
 import { atom } from "recoil";
-import { TypeOfID } from "../constants/enum";
+import { TypeOfID, MenuID } from "../constants/enum";
+
 export const navigationState = atom<boolean>({
   key: "navbar__navigationState",
   default: false,
@@ -7,8 +8,13 @@ export const navigationState = atom<boolean>({
 
 export const navigationParamsState = atom<number>({
   key: "navbar__navigationParamsState",
-  default: TypeOfID.ALL
+  default: MenuID.PROJECT
 });
+
+export const subdirectoryParamsState = atom<number>({
+  key: "navbar__subdirectoryParamsState",
+  default: TypeOfID.ALL
+})
 
 export const searchParamsState = atom<string>({
   key: "navbar__searchParamsState",

@@ -1,5 +1,5 @@
 import { selector } from "recoil";
-import { navigationParamsState, searchParamsState } from "./atom";
+import { searchParamsState, subdirectoryParamsState } from "./atom";
 import {
   ARTICLE
 } from "../constants/articles";
@@ -8,7 +8,7 @@ import { ArticleType } from "../constants/types";
 export const filteredArticlesState = selector({
   key: 'filteredArticlesState',
   get: ({ get }) => {
-    const _selectedNavParams = get(navigationParamsState);
+    const _selectedNavParams = get(subdirectoryParamsState);
     const _searchParams = get(searchParamsState);
     if (_selectedNavParams === 0) {
       return ARTICLE;

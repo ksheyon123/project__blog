@@ -5,10 +5,10 @@ import {
   navigationState,
 } from "../../../states/atom";
 import {
-  NAV__NAME
+  MENU__NAME
 } from "../../../constants/index";
 import {
-  NavigationType
+  MenuType
 } from "../../../constants/types";
 import {
   Input
@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
         <NavLogo />
         <Input type="Search" handleOnChange={() => { }} value="0" />
         {
-          NAV__NAME.map((el: NavigationType, idx: number) => {
+          MENU__NAME.map((el: MenuType, idx: number) => {
             return (
               <NavName key={idx.toString()} {...el} />
             )

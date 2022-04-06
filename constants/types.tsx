@@ -22,6 +22,12 @@ export type NavigationType = {
   name: string;
 }
 
+export type MenuType = {
+  mId: number;
+  name: string;
+  subdirectory?: any[];
+}
+
 export type ComboBoxType = {
   value: string | number;
   name: string;

@@ -1,6 +1,6 @@
 
-import { NavigationType } from "./types";
-import { TypeOfID } from "./enum";
+import { NavigationType, MenuType } from "./types";
+import { TypeOfID, MenuID } from "./enum";
 
 export const PATH__NAME = {
 
@@ -39,4 +39,16 @@ export const NAV__NAME: NavigationType[] = [
     pId: TypeOfID.WEBPACK,
     name: "Webpack"
   }
+];
+
+export const MENU__NAME: MenuType[] = [
+  {
+    mId: MenuID.PROJECT,
+    name: "Projects",
+    subdirectory: NAV__NAME
+  },
+  {
+    mId: MenuID.CONTACT,
+    name: "Contact",
+  },
 ]
